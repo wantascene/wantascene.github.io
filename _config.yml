@@ -18,5 +18,4 @@ github_username:  wantascene
 
 # Build settings
 markdown: kramdown
-gems:
-	- directory_tag
+gems: [directory_tag]
