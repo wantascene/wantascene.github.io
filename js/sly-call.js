@@ -67,8 +67,17 @@ var opt = {
     disabledClass: 'disabled' // Class for disabled navigation elements.
 };
 
-$( document ).ready(function() {
+$( '.slidee' ).imagesLoaded( function() {
 	var sly = new Sly('.frame', opt);
 	sly.init();
+    $('.slidee').css('width', function(i){ 
+        var totwidth = 0;
+        console.log('width modified');
+        $(this).find('img').each(function(i) {
+            console.log($(this).width());
+            totwidth = totwidth + $(this).width() + $(this).css('margin-right');
+        });
+        return totwidth + 10; 
+    });
 	console.log( "Sly called!" );
 });
