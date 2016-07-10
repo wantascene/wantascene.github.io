@@ -1,8 +1,3 @@
-#usage:
-#{% loop_directory directory:images iterator:image filter:*.jpg sort:descending %}
-#   <img src="{{ image }}" />
-#{% endloop_directory %}
-
 module Jekyll
     class LoopDirectoryTag < Liquid::Block
 
