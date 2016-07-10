@@ -67,6 +67,14 @@ var opt = {
     disabledClass: 'disabled' // Class for disabled navigation elements.
 };
 
+var sly = new Sly('.frame', opt);
+sly.init();
+
+$( '.slidee img' ).load( function(i) {
+    sly.reload();
+});
+
+/*
 $( '.slidee' ).imagesLoaded( function() {
 	var sly = new Sly('.frame', opt);
 	sly.init();
@@ -81,3 +89,4 @@ $( '.slidee' ).imagesLoaded( function() {
     });
 	console.log( "Sly called!" );
 });
+*/
